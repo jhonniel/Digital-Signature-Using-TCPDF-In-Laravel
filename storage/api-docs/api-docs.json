@@ -1,0 +1,78 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "APIs Digital Signature PDF Generator",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/generate-pdf-crt": {
+            "get": {
+                "tags": [
+                    "Genearte PDF With Digitag Signature Using crt File"
+                ],
+                "summary": "Generate PDF with crt file",
+                "description": "Generate PDF using crt file",
+                "operationId": "061f77becb03bc2363635418647497be",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/generate-pdf-p12": {
+            "get": {
+                "tags": [
+                    "Genearte PDF With Digitag Signature Using P12 File"
+                ],
+                "summary": "Generate PDF with p12 file",
+                "description": "Generate PDF",
+                "operationId": "b8c5f548e2fca6e53b2452d8b17fe9d4",
+                "parameters": [
+                    {
+                        "name": "p12Password",
+                        "in": "query",
+                        "description": "Password for the p12 file",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "password"
+                        }
+                    },
+                    {
+                        "name": "reason",
+                        "in": "query",
+                        "description": "Reason for generating the PDF",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "I Review the docs"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
