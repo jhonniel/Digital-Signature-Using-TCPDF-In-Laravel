@@ -2,8 +2,8 @@
 
 This simple project that will allow you to attach the .p12 or crt file to validate the Digital signature using TCPDF in Laravel
 
-## composer install
-To install the project run the command above.
+## `composer install`
+To install the project dependencies run the command above.
 
 ### `php artisan serve`
 
