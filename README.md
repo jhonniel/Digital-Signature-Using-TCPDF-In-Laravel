@@ -1,4 +1,4 @@
-# Digitag Signature Using TCPDF in Laravel
+# Digital Signature Using TCPDF in Laravel
 
 This simple project that will allow you to attach the .p12 or crt file to validate the Digital signature using TCPDF in Laravel
 
